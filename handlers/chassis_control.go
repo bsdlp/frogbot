@@ -3,7 +3,6 @@ package handlers
 import (
 	"context"
 	"fmt"
-	"strings"
 
 	"github.com/bsdlp/chassiscontrol/rpc/chassis"
 	"github.com/diamondburned/arikawa/v3/api"
@@ -37,15 +36,9 @@ func (h *Handler) powerStatus(ctx context.Context, data cmdroute.CommandData) *a
 		return errorResponse(err)
 	}
 
+	content := fmt.Sprintf("%s: :green_circle:", resp.Target)
 	return &api.InteractionResponseData{
-		Content:         option.NewNullableString(formatPowerStatusResponse(resp)),
+		Content:         option.NewNullableString(content),
 		AllowedMentions: &api.AllowedMentions{}, // don't mention anyone
 	}
-}
-
-func formatPowerStatusResponse(resp *chassis.GetChassisStatusResponse) string {
-	var builder strings.Builder
-	fmt.Fprintf(&builder, "target: %s\n", resp.Target)
-	fmt.Fprintf(&builder, "powered on: %t", resp.PoweredOn)
-	return builder.String()
 }
