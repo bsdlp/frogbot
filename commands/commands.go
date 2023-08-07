@@ -21,4 +21,49 @@ var Commands = []api.CreateCommandData{
 			},
 		},
 	},
+	{
+		Name:        "ipmi",
+		Description: "ipmi controls",
+		Options: []discord.CommandOption{
+			discord.NewSubcommandGroupOption("chassis", "chassis commands",
+				discord.NewSubcommandOption("power", "power commands",
+					&discord.StringOption{
+						OptionName:  "command",
+						Description: "power command",
+						Required:    true,
+						Choices: []discord.StringChoice{
+							{
+								Name:  "status",
+								Value: "status",
+							},
+							{
+								Name:  "off",
+								Value: "off",
+							},
+							{
+								Name:  "on",
+								Value: "on",
+							},
+							{
+								Name:  "cycle",
+								Value: "cycle",
+							},
+							{
+								Name:  "reset",
+								Value: "reset",
+							},
+							{
+								Name:  "soft",
+								Value: "soft",
+							},
+							{
+								Name:  "diagnostic interrupt",
+								Value: "diagnostic interrupt",
+							},
+						},
+					},
+				),
+			),
+		},
+	},
 }
