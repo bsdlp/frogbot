@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/bsdlp/chassiscontrol v0.0.0-20230807060258-4ec580265d12
-	github.com/davecgh/go-spew v1.1.1
 	github.com/diamondburned/arikawa/v3 v3.3.2
 )
 

@@ -1,7 +1,5 @@
 github.com/bsdlp/chassiscontrol v0.0.0-20230807060258-4ec580265d12 h1:8QhZ5wChgjIAiXD5cYBsh6eg+xB/lKdGDVUAHnTCJms=
 github.com/bsdlp/chassiscontrol v0.0.0-20230807060258-4ec580265d12/go.mod h1:5Xx9G/xOVswe5fR699TUjH1Y91VHcQLU1AWwh6E7Qt4=
-github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
-github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/diamondburned/arikawa/v3 v3.3.2 h1:WyPdMJUsQssS6yXT3Yc2M3hO37A/fWyHEOrnJQ0Ufjk=
 github.com/diamondburned/arikawa/v3 v3.3.2/go.mod h1:+ifmDonP/JdBiUOzZmVReEjPTHDUSkyqqRRmjSf9NE8=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
