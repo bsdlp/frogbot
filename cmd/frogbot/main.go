@@ -24,7 +24,7 @@ func main() {
 	}
 
 	// get config file path env var
-	cfgFilePath := os.Getenv("CONFIG_FILE_PATH")
+	cfgFilePath := os.Getenv("FROGBOT_CONFIG_FILE")
 	if cfgFilePath == "" {
 		cfgFilePath = "/etc/frogbot/config"
 	}
