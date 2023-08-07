@@ -35,8 +35,12 @@ func (h *Handler) powerStatus(ctx context.Context, data cmdroute.CommandData) *a
 	if err != nil {
 		return errorResponse(err)
 	}
+	stateIndicator := ":red_circle:"
+	if resp.PoweredOn {
+		stateIndicator = ":green_circle:"
+	}
 
-	content := fmt.Sprintf("%s: :green_circle:", resp.Target)
+	content := fmt.Sprintf("%s: %s", resp.Target, stateIndicator)
 	return &api.InteractionResponseData{
 		Content:         option.NewNullableString(content),
 		AllowedMentions: &api.AllowedMentions{}, // don't mention anyone
