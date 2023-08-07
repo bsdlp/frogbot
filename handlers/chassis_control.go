@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"context"
+	"log"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/diamondburned/arikawa/v3/api"
@@ -10,6 +11,7 @@ import (
 )
 
 func (h *Handler) ipmi(ctx context.Context, data cmdroute.CommandData) *api.InteractionResponseData {
+	log.Println("test")
 	return &api.InteractionResponseData{
 		Content: option.NewNullableString(spew.Sdump(data.CommandInteractionOption)),
 	}
